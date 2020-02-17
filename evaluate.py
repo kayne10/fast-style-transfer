@@ -11,13 +11,13 @@ import time
 import json
 import subprocess
 import numpy
-from moviepy.video.io.VideoFileClip import VideoFileClip
-import moviepy.video.io.ffmpeg_writer as ffmpeg_writer
+#from moviepy.video.io.VideoFileClip import VideoFileClip
+#import moviepy.video.io.ffmpeg_writer as ffmpeg_writer
 
 BATCH_SIZE = 4
 DEVICE = '/gpu:0'
 
-
+'''
 def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
     video_clip = VideoFileClip(path_in, audio=False)
     video_writer = ffmpeg_writer.FFMPEG_VideoWriter(path_out, video_clip.size, video_clip.fps, codec="libx264",
@@ -66,7 +66,7 @@ def ffwd_video(path_in, path_out, checkpoint_dir, device_t='/gpu:0', batch_size=
             style_and_write(frame_count)
 
         video_writer.close()
-
+'''
 
 # get img_shape
 def ffwd(data_in, paths_out, checkpoint_dir, device_t='/gpu:0', batch_size=4):
